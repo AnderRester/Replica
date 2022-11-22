@@ -2,39 +2,50 @@
 import ctypes
 from tkinter import Tk, Label
 
-# class Window_settings:
-#     def open_window():
-#         user32 = ctypes.windll.user32
-#         screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
-#         # print((screensize[0], "x", screensize[1]).replace(' ', ''))
-#         # test = str(screensize[0]) + "x" + str(screensize[1])
-#         # screensize_params = (screensize[0], "x", screensize[1]).replace(' ', '')
-#         # print(test)
-#         root = Tk()
-#         root.title("Тестирование Python")
-#         # root.geometry(test)
-#         root.attributes("-fullscreen", False)
-#
-#         # controlls
-#         def controlls_switch():
-#             if(root.bind())
-#             return print("My name is Jeff")
-#
-#         root.bind("<Key>", say_it)
-#         # def move_aside:
-#
-#         root.mainloop()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
+class WindowSetting:
     root = Tk()
 
+    # def __init__(self):
+    #     self.root = Tk()
+    def say_it(self, event):
+        print("My name is Jeff " + event.char)
 
-    def key_pressed(event):
-        w = Label(root, text="KeyPressed:" + event.char)
-        w.place(x=70, y=90)
-        print("KeyPressed:" + event.char)
+    def controller(self):
 
-    root.bind("<Key>", key_pressed)
+    def open_window(self):
+        user32 = ctypes.windll.user32
+        screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
+        # print((screensize[0], "x", screensize[1]).replace(' ', ''))
+        # test = str(screensize[0]) + "x" + str(screensize[1])
+        # screensize_params = (screensize[0], "x", screensize[1]).replace(' ', '')
+        # print(test)
 
-    root.mainloop()
+        self.root.title("Тестирование Python")
+        # root.geometry(test)
+        self.root.attributes("-fullscreen", False)
+
+        # controller
+
+        # def move_aside:
+
+        self.root.mainloop()
+
+
+# Press the green button in the gutter to run the script.
+
+if __name__ == '__main__':
+    class_instance = WindowSetting()
+    class_instance.open_window()
+
+    # root = Tk()
+    #
+    #
+    # def key_pressed(event):
+    #     w = Label(root, text="KeyPressed:" + event.char)
+    #     w.place(x=70, y=90)
+    #     print("KeyPressed:" + event.char)
+    #
+    # root.bind("<Key>", key_pressed)
+    #
+    # root.mainloop()
